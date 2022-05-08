@@ -94,19 +94,32 @@
 
             <div class="ubloaded">
                 <h1>Uploaded Images</h1>
-                <div class="show">
+                <div class="row">
                     <% items.forEach(function(image) { %>
-                    <div>
-                        <div>
-                            <img src="/uploads/<%= image.imgUrl %>" />
-                            />
-                            <div>
-                                <h5><%= image.name %></h5>
 
-                                <p><%= image.desc %></p>
-                            </div>
+                    <div class="card" style="width: 18rem">
+                        <img
+                            src="/uploads/<%= image.imgUrl %>"
+                            class="card-img-top"
+                            alt="..."
+                        />
+                        <div class="card-body">
+                            <h5 class="card-title"><%= image.name %></h5>
+                            <p class="card-text"><%= image.desc %></p>
+                            <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                     </div>
+
+                    <!-- <div>
+                      <div>
+                          <img src="/uploads/<%= image.imgUrl %>" />
+                          <div>
+                              <h5><%= image.name %></h5>
+
+                              <p><%= image.desc %></p>
+                          </div>
+                      </div>
+                  </div> -->
                     <% }) %>
                 </div>
             </div>
